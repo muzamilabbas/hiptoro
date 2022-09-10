@@ -7,14 +7,6 @@ exports.handler = async event => {
         location: `https://www.hiptoro.com/?page_id=${event.headers.referer.pid}` 
       }
     }
-  } else {
-    let pathName = location.pathname.split('/')[2].split('-')
-    return {
-      statusCode: 301,
-      headers: {
-        location: process.env.URL + pathName[0] + '/' + pathName[1]
-      }
-    }
   }
 }
 
