@@ -11,7 +11,7 @@ exports.handler = async event => {
     return {
       statusCode: 301,
       headers: {
-        location: `https://wondrous-malasada-3ffc32.netlify.app/post/${event.queryStringParameters.pid}`
+        location: `https://wondrous-malasada-3ffc32.netlify.app/post/${event.queryStringParameters.pid}.html`
       }
     }
   }
