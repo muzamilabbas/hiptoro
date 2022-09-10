@@ -7,6 +7,13 @@ exports.handler = async event => {
         location: `https://www.hiptoro.com/?page_id=${event.queryStringParameters.pid}` 
       }
     }
+  } else {
+    return {
+      statusCode: 301,
+      headers: {
+        location: `https://wondrous-malasada-3ffc32.netlify.app/post/${event.queryStringParameters.pid}`
+      }
+    }
   }
 }
 
