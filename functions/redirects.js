@@ -4,7 +4,7 @@ exports.handler = async event => {
     return {
       statusCode: 301,
       headers: {
-        location: `https://www.hiptoro.com/?page_id=${event.headers.referer.pid}` 
+        location: `https://www.hiptoro.com/?page_id=${event.queryStringParameters.pid}` 
       }
     }
   }
