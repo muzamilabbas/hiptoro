@@ -1,5 +1,8 @@
 exports.handler = async event => {
-  return event.headers.referer;
+  return {
+    statusCode: 200,
+    body: event.headers.referer
+  }
 }
 
 // exports.handler = async event => {
