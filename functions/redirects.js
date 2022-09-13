@@ -1,7 +1,7 @@
 exports.handler = async event => {
   return {
     statusCode: 200,
-    body: event.headers.referer
+    body: JSON.stringify(event.headers.referer)
   }
 }
 
