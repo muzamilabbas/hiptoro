@@ -1,0 +1,18 @@
+
+exports.handler = async event => {
+  if (event.headers.referer && event.headers.referer.includes('facebook')) {
+    return {
+      statusCode: 301,
+      headers: {
+        location: `https://www.hiptoro.com/?page_id=1234` 
+      }
+    }
+  } else {
+    return {
+      statusCode: 301,
+      headers: {
+        location: `https://petsarelove.netlify.app/post/1234.html`
+      }
+    }
+  }
+}
